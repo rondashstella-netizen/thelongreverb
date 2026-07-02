@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Long Reverb | Signal Tower Press</title>
+  <meta name="description" content="The Long Reverb is an archive, publishing, and listening project by Ron Dash Stella and Signal Tower Press: books, essays, signal studies, visual memory, and the cultural echo of sound." />
+  <meta name="author" content="Ron Dash Stella" />
+  <meta property="og:title" content="The Long Reverb" />
+  <meta property="og:description" content="Books, signals, archives, and future bardos by Ron Dash Stella and Signal Tower Press." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --black: #08090a;
+      --ink: #111316;
+      --panel: #151719;
+      --paper: #d8c7a1;
+      --gold: #b8944d;
+      --brass: #8f6c2e;
+      --teal: #5c9a94;
+      --text: #efe6d0;
+      --muted: #b8a98c;
+      --line: rgba(184,148,77,.34);
+      --shadow: rgba(0,0,0,.55);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #172024 0%, var(--black) 42%, #020303 100%);
+      color: var(--text);
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.55;
+    }
+    a { color: var(--paper); }
+    .shell {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 40px 18px;
+    }
+    .frame {
+      width: min(1100px, 100%);
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(17,19,22,.94), rgba(8,9,10,.98));
+      box-shadow: 0 28px 90px var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(184,148,77,.06), transparent 22%, transparent 78%, rgba(92,154,148,.07)),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.018) 0, rgba(255,255,255,.018) 1px, transparent 1px, transparent 4px);
+      pointer-events: none;
+    }
+    header, main, footer { position: relative; z-index: 1; }
+    header {
+      padding: 34px clamp(22px, 5vw, 64px) 24px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 22px;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    .mark {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .24em;
+      font-size: 12px;
+    }
+    .imprint {
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .hero {
+      padding: clamp(42px, 7vw, 84px) clamp(22px, 5vw, 64px) 42px;
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: clamp(28px, 5vw, 60px);
+      align-items: end;
+    }
+    h1 {
+      margin: 0 0 14px;
+      color: var(--paper);
+      font-size: clamp(48px, 8vw, 108px);
+      line-height: .9;
+      letter-spacing: -.055em;
+      font-weight: 400;
+    }
+    .subtitle {
+      max-width: 760px;
+      font-size: clamp(18px, 2.2vw, 27px);
+      color: #e7dcc4;
+      margin: 0 0 30px;
+    }
+    .statement {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+      margin: 0;
+    }
+    .ledger {
+      border: 1px solid var(--line);
+      background: rgba(216,199,161,.06);
+      padding: 22px;
+    }
+    .ledger h2 {
+      margin: 0 0 12px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    .ledger p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+    }
+    .card {
+      padding: 30px clamp(22px, 4vw, 42px);
+      border-right: 1px solid var(--line);
+      min-height: 250px;
+    }
+    .card:last-child { border-right: 0; }
+    h2 {
+      margin: 0 0 12px;
+      color: var(--paper);
+      font-size: 26px;
+      line-height: 1.05;
+      font-weight: 400;
+    }
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 16px;
+    }
+    ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+    .callout {
+      padding: 38px clamp(22px, 5vw, 64px);
+      border-top: 1px solid var(--line);
+      background: rgba(0,0,0,.22);
+    }
+    .callout p {
+      max-width: 860px;
+      margin: 0;
+      color: #dfd2b6;
+      font-size: clamp(18px, 2vw, 24px);
+    }
+    footer {
+      padding: 26px clamp(22px, 5vw, 64px) 34px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 820px) {
+      .hero, .sections { grid-template-columns: 1fr; }
+      .card { border-right: 0; border-bottom: 1px solid var(--line); min-height: auto; }
+      .card:last-child { border-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="frame">
+      <header>
+        <div class="mark">The Long Reverb</div>
+        <div class="imprint">Signal Tower Press · Ron Dash Stella</div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="site-title">
+          <div>
+            <h1 id="site-title">The Long Reverb</h1>
+            <p class="subtitle">An archive, publishing, and listening project about sound, memory, image, resonance, and the cultural signal that outlives the moment.</p>
+            <p class="statement">The Long Reverb is not a single book. It is a larger field of books, essays, visual memory, witness conversations, audio work, and Signal Tower Press artifacts built around the question of what remains after sound has passed through a room, a body, a culture, or a machine.</p>
+          </div>
+          <aside class="ledger" aria-label="Signal ledger">
+            <h2>Signal Ledger</h2>
+            <p>Books, signals, archives, and future bardos. A working public index for the Long Reverb world as it moves from private production into release.</p>
+          </aside>
+        </section>
+
+        <section class="sections" aria-label="Project areas">
+          <article class="card">
+            <h2>Books</h2>
+            <p>Anchor works include <em>The Hidden Current</em>, <em>Bardo Conditions</em>, and future resonance studies from Signal Tower Press. The books are artifacts, not the end of the system.</p>
+          </article>
+          <article class="card">
+            <h2>Archive</h2>
+            <p>A living archive of essays, images, field notes, interviews, and cultural signal studies. The archive tracks sound as memory, architecture, witness, and transmission.</p>
+          </article>
+          <article class="card">
+            <h2>Signal Witnesses</h2>
+            <p>A developing interview lane for photographers, musicians, engineers, writers, archivists, builders, and listeners whose work touches sound, image, performance, rooms, recordings, and time.</p>
+          </article>
+        </section>
+
+        <section class="callout">
+          <p>Publish the artifact. Build the world. Watch the signal. Move toward what responds.</p>
+        </section>
+      </main>
+
+      <footer>
+        <span>© 2026 Ron Dash Stella / Signal Tower Press</span>
+        <span>Public launch page · Full archive forthcoming</span>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
