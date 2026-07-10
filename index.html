@@ -4,161 +4,66 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Long Reverb | Signal Tower Press</title>
-  <meta name="description" content="The Long Reverb is the public archive, publishing world, and listening project by Ron Dash Stella and Signal Tower Press: books, essays, witness work, visual memory, and sound as cultural signal." />
+  <meta name="description" content="The Long Reverb is the public world for books, visual memory, listening work, witness, and archive by Ron Dash Stella and Signal Tower Press." />
   <meta name="author" content="Ron Dash Stella" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://thelongreverb.com/" />
   <meta property="og:title" content="The Long Reverb" />
-  <meta property="og:description" content="Books, signals, archives, witness work, and future bardos by Ron Dash Stella and Signal Tower Press." />
+  <meta property="og:description" content="Books, witness, visual memory, listening work, and cultural signal from Ron Dash Stella and Signal Tower Press." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thelongreverb.com/" />
-  <style>
-    :root {
-      --black: #070809;
-      --ink: #101215;
-      --panel: #16181b;
-      --paper: #d9c59b;
-      --gold: #b8934b;
-      --brass: #8f6b2f;
-      --teal: #5f9a93;
-      --text: #efe5cf;
-      --muted: #baa98a;
-      --line: rgba(184,147,75,.38);
-      --shadow: rgba(0,0,0,.58);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background:
-        radial-gradient(circle at 15% 0%, rgba(95,154,147,.16) 0%, transparent 32%),
-        radial-gradient(circle at 80% 12%, rgba(184,147,75,.11) 0%, transparent 30%),
-        linear-gradient(180deg, #11191c 0%, var(--black) 52%, #020303 100%);
-      color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.55;
-    }
-    a { color: var(--paper); text-decoration-color: rgba(217,197,155,.38); }
-    .shell { min-height: 100vh; padding: 38px 18px; display: grid; place-items: center; }
-    .frame {
-      width: min(1180px, 100%);
-      border: 1px solid var(--line);
-      background: linear-gradient(145deg, rgba(17,19,22,.96), rgba(7,8,9,.985));
-      box-shadow: 0 30px 95px var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-    .frame::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(90deg, rgba(184,147,75,.07), transparent 22%, transparent 78%, rgba(95,154,147,.08)),
-        repeating-linear-gradient(0deg, rgba(255,255,255,.018) 0, rgba(255,255,255,.018) 1px, transparent 1px, transparent 4px);
-      pointer-events: none;
-    }
-    header, main, footer { position: relative; z-index: 1; }
-    header {
-      padding: 30px clamp(22px, 5vw, 64px) 24px;
-      border-bottom: 1px solid var(--line);
-      display: flex;
-      justify-content: space-between;
-      gap: 22px;
-      align-items: baseline;
-      flex-wrap: wrap;
-    }
-    .mark { color: var(--gold); text-transform: uppercase; letter-spacing: .24em; font-size: 12px; }
-    .imprint { color: var(--muted); font-size: 14px; letter-spacing: .08em; text-transform: uppercase; }
-    .hero {
-      padding: clamp(42px, 7vw, 84px) clamp(22px, 5vw, 64px) 42px;
-      display: grid;
-      grid-template-columns: 1.22fr .78fr;
-      gap: clamp(28px, 5vw, 60px);
-      align-items: end;
-    }
-    h1 {
-      margin: 0 0 16px;
-      color: var(--paper);
-      font-size: clamp(46px, 8vw, 112px);
-      line-height: .9;
-      letter-spacing: -.055em;
-      font-weight: 400;
-    }
-    .subtitle { max-width: 790px; font-size: clamp(18px, 2.2vw, 28px); color: #e7dcc4; margin: 0 0 28px; }
-    .statement { max-width: 760px; color: var(--muted); font-size: 17px; margin: 0; }
-    .ledger { border: 1px solid var(--line); background: rgba(217,197,155,.06); padding: 22px; }
-    .ledger h2, .kicker { margin: 0 0 12px; color: var(--gold); text-transform: uppercase; letter-spacing: .18em; font-size: 13px; font-weight: 400; }
-    .ledger p { margin: 0 0 12px; color: var(--muted); font-size: 15px; }
-    .status { display: inline-block; margin-top: 8px; padding: 7px 10px; border: 1px solid rgba(184,147,75,.48); color: var(--paper); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
-    .sections { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
-    .card { padding: 30px clamp(22px, 4vw, 42px); border-right: 1px solid var(--line); min-height: 270px; }
-    .card:last-child { border-right: 0; }
-    h2 { margin: 0 0 12px; color: var(--paper); font-size: 27px; line-height: 1.05; font-weight: 400; }
-    .card p, .card li { color: var(--muted); font-size: 16px; }
-    ul { margin: 12px 0 0; padding-left: 18px; }
-    .callout { padding: 38px clamp(22px, 5vw, 64px); border-top: 1px solid var(--line); background: rgba(0,0,0,.24); }
-    .callout p { max-width: 900px; margin: 0; color: #dfd2b6; font-size: clamp(18px, 2vw, 24px); }
-    .launch-strip { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); background: rgba(217,197,155,.035); }
-    .launch-item { padding: 20px clamp(18px, 3vw, 30px); border-right: 1px solid var(--line); color: var(--muted); font-size: 14px; }
-    .launch-item:last-child { border-right: 0; }
-    .launch-item strong { display: block; color: var(--paper); font-weight: 400; margin-bottom: 6px; }
-    footer { padding: 26px clamp(22px, 5vw, 64px) 34px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    @media (max-width: 840px) { .hero, .sections, .launch-strip { grid-template-columns: 1fr; } .card, .launch-item { border-right: 0; border-bottom: 1px solid var(--line); min-height: auto; } .card:last-child, .launch-item:last-child { border-bottom: 0; } }
-  </style>
+  <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
-  <div class="shell">
-    <div class="frame">
-      <header>
-        <div class="mark">The Long Reverb</div>
-        <div class="imprint">Signal Tower Press · Ron Dash Stella</div>
-      </header>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <div class="shell"><div class="frame">
+    <header class="site-header">
+      <div class="identity"><a class="wordmark" href="index.html" aria-current="page">The Long Reverb</a><span class="imprint">Signal Tower Press · Ron Dash Stella</span></div>
+      <nav class="site-nav" aria-label="Primary"><a href="index.html" aria-current="page">Home</a><a href="books.html">Books</a><a href="archive.html">Archive</a><a href="signal-tower-press.html">Press</a><a href="contact.html">Contact</a></nav>
+    </header>
 
-      <main>
-        <section class="hero" aria-labelledby="site-title">
+    <main id="content">
+      <section class="hero">
+        <div class="hero-grid">
           <div>
-            <h1 id="site-title">The Long Reverb</h1>
-            <p class="subtitle">A public archive, publishing world, and listening project about sound, memory, image, resonance, witness, and the signal that outlives the moment.</p>
-            <p class="statement">The Long Reverb is not a single book. It is a field of books, essays, visual memory, witness conversations, audio work, and Signal Tower Press artifacts built around what remains after sound has passed through a room, a body, a culture, or a machine.</p>
+            <span class="eyebrow">Books · archive · sound · witness</span>
+            <h1>The Long Reverb</h1>
+            <p class="lede">A publishing world and listening project about what remains after sound passes through a room, a body, a culture, or a machine.</p>
+            <p class="prose">The Long Reverb is not one numbered series. It is the larger field holding distinct books, visual systems, essays, witness records, sound work, and Signal Tower Press artifacts without erasing their differences.</p>
+            <div class="actions"><a class="button" href="books.html">Enter the books</a><a class="button secondary" href="archive.html">Open the archive</a></div>
           </div>
           <aside class="ledger" aria-label="Signal ledger">
-            <h2>Signal Ledger</h2>
-            <p>Public footing is active. The full archive, Bardo interfaces, visual language cards, essays, and product links will be staged here as the system clears each approval gate.</p>
-            <span class="status">Launch footing · 2026</span>
+            <span class="section-label">Signal Ledger / 2026</span>
+            <h2>Public footing active.</h2>
+            <p>The first navigable structure is in place. Books, archive, imprint, and contact now have separate rooms. Art and release assets enter only after continuity, rights, provenance, and approval checks.</p>
+            <span class="status">Staged public build</span>
           </aside>
-        </section>
+        </div>
+      </section>
 
-        <section class="sections" aria-label="Project areas">
-          <article class="card">
-            <h2>Books</h2>
-            <p>Anchor works include <em>The Hidden Current</em>, <em>Bardo Conditions</em>, and future resonance studies from Signal Tower Press. The books are artifacts and gateways into the larger system.</p>
-          </article>
-          <article class="card">
-            <h2>Archive</h2>
-            <p>A living archive of essays, images, field notes, interviews, captions, art-language panels, and cultural signal studies. The archive tracks sound as memory, architecture, witness, and transmission.</p>
-          </article>
-          <article class="card">
-            <h2>Witness</h2>
-            <p>A developing lane for photographers, musicians, engineers, writers, archivists, builders, and listeners whose work touches sound, image, performance, rooms, recordings, machines, and time.</p>
-          </article>
-        </section>
+      <section class="section">
+        <div class="section-head"><div><span class="section-label">Current field</span><h2>Five doors, one world.</h2></div><p>The site is being built page by page. Each section has a defined role, visual language, and approval boundary.</p></div>
+        <div class="grid-3">
+          <article class="card"><a class="card-link" href="books.html" aria-label="Books"></a><span class="artifact-code">01 / Books</span><h3>Separate series. No false sequence.</h3><p>The Hidden Current studies and the Bardos fiction retain their own numbering, tone, and reader contract.</p><div class="meta"><a href="books.html">View the book architecture</a></div></article>
+          <article class="card"><a class="card-link" href="archive.html" aria-label="Archive"></a><span class="artifact-code">02 / Archive</span><h3>Evidence with a chain of custody.</h3><p>Visual memory, Signal Ledger entries, witness work, listening notes, and restored artifacts open in controlled stages.</p><div class="meta"><a href="archive.html">Enter the archive</a></div></article>
+          <article class="card"><a class="card-link" href="signal-tower-press.html" aria-label="Signal Tower Press"></a><span class="artifact-code">03 / Imprint</span><h3>Signal Tower Press</h3><p>The canonical publishing authority. Superseded imprint names are removed from current public identity.</p><div class="meta"><a href="signal-tower-press.html">Read the imprint page</a></div></article>
+          <article class="card"><span class="artifact-code">04 / Listening</span><h3>Sound as architecture and witness.</h3><p>Field recordings, spatial studies, room behavior, and controlled audio excerpts will enter through the archive without exposing protected production methods.</p><div class="meta">Listening room in preparation</div></article>
+          <article class="card"><span class="artifact-code">05 / Bardo Engine</span><h3>An interpretive interface, not a manuscript dump.</h3><p>The public Bardo interface remains behind its approval gate while design, text boundaries, and artifact routing are resolved.</p><div class="meta">Staged system · not yet public</div></article>
+          <article class="card"><a class="card-link" href="contact.html" aria-label="Contact"></a><span class="artifact-code">06 / Contact</span><h3>Route the signal correctly.</h3><p>Publishing, witness, collaboration, rights, and serious project inquiries now have a controlled entry point.</p><div class="meta"><a href="contact.html">Contact the project</a></div></article>
+        </div>
+      </section>
 
-        <section class="launch-strip" aria-label="Launch lanes">
-          <div class="launch-item"><strong>Imprint</strong> Signal Tower Press is the publishing authority.</div>
-          <div class="launch-item"><strong>World</strong> The Long Reverb holds the archive and Bardo-adjacent interfaces.</div>
-          <div class="launch-item"><strong>Store</strong> RonDashStella.com will carry direct products, field kits, and service entry points.</div>
-          <div class="launch-item"><strong>System</strong> Ghost OS and Signal Bridge convert the work into operating infrastructure.</div>
-        </section>
+      <section class="signal-strip" aria-label="Project boundaries">
+        <div><strong>World</strong>TheLongReverb.com holds the books, archive, art, and listening field.</div>
+        <div><strong>Creator</strong>RonDashStella.com remains the personal, services, store, and creator hub.</div>
+        <div><strong>Imprint</strong>Signal Tower Press is the publishing authority and continuity lock.</div>
+        <div><strong>System</strong>Ghost OS and Signal Bridge remain operating infrastructure, not homepage spectacle.</div>
+      </section>
 
-        <section class="callout">
-          <p>Publish the artifact. Build the world. Watch the signal. Move toward what responds.</p>
-        </section>
-      </main>
+      <section class="quote"><p>Publish the artifact. Build the world. Keep the source visible. Move toward what responds.</p></section>
+    </main>
 
-      <footer>
-        <span>© 2026 Ron Dash Stella / Signal Tower Press</span>
-        <span>Public launch footing · Full archive forthcoming</span>
-      </footer>
-    </div>
-  </div>
+    <footer class="site-footer"><span>© 2026 Ron Dash Stella / Signal Tower Press</span><span>Public structure active · archive and releases staged by approval</span></footer>
+  </div></div>
 </body>
 </html>
