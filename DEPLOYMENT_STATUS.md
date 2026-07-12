@@ -1,37 +1,40 @@
 # The Long Reverb — Deployment Status
 
-Status: CODE COMMITTED / PUBLIC DEPLOYMENT NOT YET VERIFIED  
-Date: 2026-07-10 America/Los_Angeles  
+Status: RENDERED BUILD MERGED TO MAIN / PUBLIC DNS + HTTPS VERIFICATION PENDING  
+Date: 2026-07-12 America/Los_Angeles  
 Repository: `rondashstella-netizen/thelongreverb`  
 Default branch: `main`  
+Rendered-site merge: `8b10f8016fa5e5c68beffbc64f78e1dc840d8ece`  
 Custom domain file: `CNAME -> thelongreverb.com`
 
-## Completed in the current build
+## Current public build
 
-- Replaced the static holding page with a navigable Long Reverb homepage.
-- Added a shared responsive visual system at `assets/site.css`.
-- Added `books.html` with the locked series separation:
-  - Hidden Current Series: *The Hidden Current* and *The Architecture of Resonance*.
-  - Bardos Series: *Bardo Conditions* and *Vera*.
-  - *ChadPt* remains unnumbered until editorial placement is approved.
-- Added `archive.html` for Signal Ledger, visual memory, witness, listening, field notes, and Robin/Wren archive lanes.
-- Added `signal-tower-press.html` with Signal Tower Press as the canonical public imprint.
-- Added `contact.html` with the controlled fallback route `signal@rondashstella.com`.
-- Added `sitemap.xml` and connected it from `robots.txt`.
-- Added a project-specific `404.html`.
-- Preserved approval gates around manuscripts, store claims, the Bardo Engine, private archives, proprietary audio methods, credentials, and unreleased assets.
+- Rebuilt the homepage around the Long Reverb signal-archive visual direction.
+- Added responsive desktop/mobile navigation and a shared visual system.
+- Added `about.html`.
+- Rebuilt `books.html` as the central book-routing page.
+- Opened individual book rooms for:
+  - `hidden-current.html`
+  - `architecture-of-resonance.html`
+  - `bardo-conditions.html`
+  - `vera.html`
+- Added the related, unnumbered `chadpt.html` branch.
+- Rebuilt `archive.html` as the Visual Archive entry.
+- Added `bardo-engine.html` as a controlled system page.
+- Rebuilt `signal-tower-press.html` and `contact.html`.
+- Added the signal mark, procedural hero artwork, responsive script, 404 page, and updated sitemap.
 
 ## Continuity locks enforced
 
-- The Long Reverb is the umbrella world, not one numbered book series.
-- Hidden Current and Bardos numbering remain separate.
-- Signal Tower Press is the public imprint.
-- “Signal House Press” and “Static Temple Press” are superseded public names.
-- Radio/tuner-dial identity belongs to Bardo signal language, not The Hidden Current.
-- RonDashStella.com remains the creator/store/services hub; TheLongReverb.com remains the world/archive site.
-- Ghost OS and Signal Bridge remain operating infrastructure, not homepage spectacle.
+- The Long Reverb is the unnumbered umbrella.
+- Hidden Current Series: Book 1 is *The Hidden Current*; Book 2 is *The Architecture of Resonance*.
+- Bardos Series: Book 1 is *Bardo Conditions*; Book 2 is *Vera*.
+- *ChadPt* remains related and unnumbered; it is not Bardos Book 1.
+- Signal Tower Press is the canonical public imprint.
+- “Signal House Press” is obsolete in current public copy.
+- Radio/tuner-dial identity belongs to the Bardo signal world, not The Hidden Current.
 
-## Deployment infrastructure present
+## Deployment infrastructure
 
 - `.nojekyll`
 - `.github/workflows/pages.yml`
@@ -39,26 +42,17 @@ Custom domain file: `CNAME -> thelongreverb.com`
 - `robots.txt`
 - `sitemap.xml`
 
-The Pages workflow is configured to deploy on pushes to `main`. The repository commits are confirmed. The current connector did not return a workflow run for the latest push, so deployment, DNS, and HTTPS are not represented as verified.
+The Pages workflow is configured to deploy on pushes to `main`. The rendered build is confirmed on `main`. The connector does not expose the push-triggered Pages run in this session, so public DNS resolution, the final Pages job, and HTTPS are not represented as verified yet.
 
-## Verification still required
+## Remaining verification
 
-1. Confirm GitHub Pages uses **GitHub Actions** as its build source.
+1. Confirm GitHub Pages is using GitHub Actions as its build source.
 2. Confirm the latest Pages workflow completed successfully.
-3. Confirm DNS for `thelongreverb.com` points to GitHub Pages.
-4. Confirm the custom domain resolves and HTTPS is active.
-5. Confirm `signal@rondashstella.com` receives mail before promoting it broadly.
-6. Add treated MASTER_ART assets only after source, rights, continuity, and provenance review.
-7. Add public release/store links only after Dash explicitly approves the exact product and destination.
+3. Confirm `thelongreverb.com` resolves to GitHub Pages and HTTPS is active.
+4. Perform a browser QA pass on desktop and mobile.
+5. Replace procedural web artwork with approved MASTER_ART only after source, rights, continuity, and provenance review.
+6. Add store/release links only after the exact product destinations are approved.
 
-## Next safe build units
+## Editorial pass
 
-1. Route approved MASTER_ART hero and book assets into the five current pages.
-2. Build the first three public Signal Ledger entries.
-3. Build a controlled Listening Room shell without exposing protected 7OA/Coconut128 routing logic.
-4. Add a newsletter or audience-capture route after the receiving account and privacy language are verified.
-5. Build SignalTowerPress.com and RonDashStella.com as separate fronts rather than overloading this site.
-
-## Public gate
-
-This website structure may be deployed as public project footing. It does not publish manuscripts, KDP files, paid products, private archives, proprietary system details, or third-party copyrighted assets.
+The public text is cleaned enough for routing and structure. Biography, final synopses, release claims, excerpts, and product language still require page-by-page editorial approval before promotion.
