@@ -1,2 +1,2 @@
 # thelongreverb
-Books, signals, archives, and future bardos by Ron Dash Stella
+Books, signals, archives, listening systems, and the Bardos work of Ron Dash Stella.

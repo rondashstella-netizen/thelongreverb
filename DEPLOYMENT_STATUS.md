@@ -1,37 +1,32 @@
 # The Long Reverb — Deployment Status
 
-Status: RENDERED BUILD MERGED TO MAIN / PUBLIC DNS + HTTPS VERIFICATION PENDING  
-Date: 2026-07-12 America/Los_Angeles  
+Status: CANON CORRECTION MERGED TO MAIN / PAGES VERIFICATION FOLLOWS  
+Date: 2026-09-03 America/Los_Angeles  
 Repository: `rondashstella-netizen/thelongreverb`  
 Default branch: `main`  
-Rendered-site merge: `8b10f8016fa5e5c68beffbc64f78e1dc840d8ece`  
 Custom domain file: `CNAME -> thelongreverb.com`
 
 ## Current public build
 
-- Rebuilt the homepage around the Long Reverb signal-archive visual direction.
-- Added responsive desktop/mobile navigation and a shared visual system.
-- Added `about.html`.
-- Rebuilt `books.html` as the central book-routing page.
-- Opened individual book rooms for:
-  - `hidden-current.html`
-  - `architecture-of-resonance.html`
-  - `bardo-conditions.html`
-  - `vera.html`
-- Added the related, unnumbered `chadpt.html` branch.
-- Rebuilt `archive.html` as the Visual Archive entry.
-- Added `bardo-engine.html` as a controlled system page.
-- Rebuilt `signal-tower-press.html` and `contact.html`.
-- Added the signal mark, procedural hero artwork, responsive script, 404 page, and updated sitemap.
+- The Long Reverb remains the world/archive site.
+- `books.html` routes the current book architecture.
+- `hidden-current.html` is the unnumbered nonfiction title page for *The Hidden Current*.
+- `architecture-of-resonance.html` is retained as an unnumbered development/archive page and is not part of a locked public sequence.
+- `bardo-conditions.html` and `vera.html` are the two numbered Bardos pages.
+- `chadpt.html` remains a related, unnumbered branch.
+- Signal Tower Press remains the canonical public imprint.
 
-## Continuity locks enforced
+## Continuity locks
 
-- The Long Reverb is the unnumbered umbrella.
-- Hidden Current Series: Book 1 is *The Hidden Current*; Book 2 is *The Architecture of Resonance*.
-- Bardos Series: Book 1 is *Bardo Conditions*; Book 2 is *Vera*.
-- *ChadPt* remains related and unnumbered; it is not Bardos Book 1.
-- Signal Tower Press is the canonical public imprint.
-- “Signal House Press” is obsolete in current public copy.
+- **The Long Reverb is the unnumbered umbrella.**
+- **The Hidden Current is unnumbered.** Do not label it Book 1, Volume 1, Hidden Current / 01, or use it to infer a Long Reverb Book 3.
+- **The Architecture of Resonance is not assigned a public book number.** It remains development material unless Dash explicitly changes that status.
+- **Bardos / 01: Bardo Conditions.**
+- **Bardos / 02: Vera.**
+- **No Bardos / 03 is assigned.** Do not manufacture a third number from adjacent projects.
+- *ChadPt* is related and unnumbered.
+- Signal Tower Press is the canonical imprint. `Signal House Press` and `Static Temple` are obsolete public-language errors.
+- RonDashStella.com is the creator/store/services hub; TheLongReverb.com is the world/archive site.
 - Radio/tuner-dial identity belongs to the Bardo signal world, not The Hidden Current.
 
 ## Deployment infrastructure
@@ -42,17 +37,15 @@ Custom domain file: `CNAME -> thelongreverb.com`
 - `robots.txt`
 - `sitemap.xml`
 
-The Pages workflow is configured to deploy on pushes to `main`. The rendered build is confirmed on `main`. The connector does not expose the push-triggered Pages run in this session, so public DNS resolution, the final Pages job, and HTTPS are not represented as verified yet.
+The Pages workflow is configured to deploy pushes to `main`.
 
-## Remaining verification
+## Remaining external verification
 
-1. Confirm GitHub Pages is using GitHub Actions as its build source.
-2. Confirm the latest Pages workflow completed successfully.
-3. Confirm `thelongreverb.com` resolves to GitHub Pages and HTTPS is active.
-4. Perform a browser QA pass on desktop and mobile.
-5. Replace procedural web artwork with approved MASTER_ART only after source, rights, continuity, and provenance review.
-6. Add store/release links only after the exact product destinations are approved.
+1. Confirm the Pages workflow for this canon-correction commit completes successfully.
+2. Confirm `thelongreverb.com` resolves and HTTPS serves the corrected build.
+3. Continue replacing procedural art with approved project art where the final source/usage choice is already established.
+4. Add direct store/release destinations as those exact external destinations become available.
 
-## Editorial pass
+## Operating rule
 
-The public text is cleaned enough for routing and structure. Biography, final synopses, release claims, excerpts, and product language still require page-by-page editorial approval before promotion.
+A stale file or old status note does not override the current production artifact or this corrected canon. Ordinary metadata/copy errors are edits, not reasons to stop the work.
