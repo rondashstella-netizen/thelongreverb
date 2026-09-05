@@ -1,7 +1,7 @@
 # The Long Reverb — Deployment Status
 
 Status: REPOSITORY BUILD READY / GITHUB PAGES SETTING BLOCKS DEPLOYMENT  
-Date: 2026-09-04 America/Los_Angeles  
+Date: 2026-09-05 America/Los_Angeles  
 Repository: `rondashstella-netizen/thelongreverb`  
 Default branch: `main`  
 Custom domain file: `CNAME -> thelongreverb.com`
@@ -10,25 +10,31 @@ Custom domain file: `CNAME -> thelongreverb.com`
 
 - The Long Reverb remains the world/archive site.
 - `books.html` routes the current book architecture.
-- `hidden-current.html` is the unnumbered nonfiction title page for *The Hidden Current*.
-- `architecture-of-resonance.html` is retained as an unnumbered development/archive page and is not part of a locked public sequence.
+- `hidden-current.html` is the unnumbered nonfiction title page for **Hidden Currents**.
+- `architecture-of-resonance.html` is retained as the unnumbered **Architecture of Resonance** development/archive page.
 - `bardo-conditions.html` and `vera.html` are the two numbered Bardos pages.
 - `chadpt.html` remains a related, unnumbered branch.
 - Signal Tower Press remains the canonical public imprint.
-- The homepage now features the approved Bardo Conditions and Hidden Current publication art already stored in the repository.
+- The homepage and book pages use the approved Bardo Conditions and Hidden Currents publication art already stored in the repository.
+- The Vera page now uses recovered book identity and text-only presentation; no generic replacement cover is being presented as approved art.
+- Hidden Currents now exposes the actual eight-movement book architecture and the Carriers / Declassified Listening Notes positioning rather than placeholder copy.
 
 ## Continuity locks
 
 - **The Long Reverb is the unnumbered umbrella.**
-- **The Hidden Current is unnumbered.** Do not label it Book 1, Volume 1, Hidden Current / 01, or use it to infer a Long Reverb Book 3.
-- **The Architecture of Resonance is not assigned a public book number.** It remains development material unless Dash explicitly changes that status.
+- **Hidden Currents is unnumbered.** Do not label it Book 1, Volume 1, Hidden Current / 01, or use it to infer a Long Reverb Book 3.
+- **Architecture of Resonance is unnumbered.** It remains development material unless Dash explicitly changes that status.
 - **Bardos / 01: Bardo Conditions.**
 - **Bardos / 02: Vera.**
 - **No Bardos / 03 is assigned.** Do not manufacture a third number from adjacent projects.
 - *ChadPt* is related and unnumbered.
 - Signal Tower Press is the canonical imprint. `Signal House Press` and `Static Temple` are obsolete public-language errors.
 - RonDashStella.com is the creator/store/services hub; TheLongReverb.com is the world/archive site.
-- Radio/tuner-dial identity belongs to the Bardo signal world, not The Hidden Current.
+- Radio/tuner-dial identity belongs to the Bardo signal world, not Hidden Currents.
+
+## Bardo publication recovery status
+
+A separate recovery map is now maintained in Google Drive as `BARDO_FINAL_RECOVERY_MAP_2026-09-05`. The recovered terminal movement resolves the apparent Chux/Myth conflict as **Chux Myth** and restores the Unit 7 / fan-still-running / next-receiver ending without overwriting the 2026-08-31 rebuilt source. Bardo Conditions remains Book 1 and uses the single approved cover supplied by Dash.
 
 ## Deployment infrastructure
 
@@ -42,37 +48,29 @@ Present in the repository:
 
 The Pages workflow is configured to deploy pushes to `main`.
 
-## Verified blocker — 2026-09-04
+## Verified deployment blocker
 
-Latest deployment run: `33872078715` on commit `48e363653a168c8220e42c6f0e0d9a7f8d720989` (`Feature approved book art on homepage`).
-
-Verified step state:
-
-- Checkout: **PASS**
-- Configure Pages: **FAIL**
-- Upload artifact: **SKIPPED**
-- Deploy to GitHub Pages: **SKIPPED**
-
-The Configure Pages log reports:
+The last independently inspected deployment attempts failed in **Configure Pages** before artifact upload or deployment. The log reported:
 
 - `Get Pages site failed: Not Found`
 - `Create Pages site failed: Resource not accessible by integration`
 
-This is not a site-file, CNAME, or artwork failure. The repository still needs GitHub Pages enabled in repository **Settings → Pages** with the build/deployment source set to **GitHub Actions**. The workflow token can deploy Pages after the site exists, but the current integration cannot create/enable the Pages site itself.
+This is not a site-file, CNAME, title, or artwork failure. The repository needs GitHub Pages enabled in repository **Settings → Pages** with the build/deployment source set to **GitHub Actions**. Content commits do not bypass that repository-level setting.
 
 ## Shortest path to public serving
 
 1. In this repository, enable GitHub Pages and select **GitHub Actions** as the deployment source.
-2. Re-run workflow `33872078715` or push a no-content-change trigger after the setting is saved.
+2. Re-run the latest Pages workflow or push a no-content-change trigger after the setting is saved.
 3. Require Configure Pages, artifact upload, and deploy to all pass.
 4. Confirm `thelongreverb.com` resolves over HTTPS and the homepage plus one internal route return HTTP 200.
 
-Do not alter the approved site files, CNAME, cover art, manuscript state, or public purchase claims to work around this blocker unless a new deployment log identifies a different failure.
+Do not alter the approved CNAME, cover art, manuscript state, or public purchase claims to work around this setting-level blocker unless a new deployment log identifies a different failure.
 
 ## Other remaining work
 
-- Continue replacing procedural art only where the final approved source/usage choice is already established.
 - Add direct store/release destinations only when those exact external destinations are available.
+- Continue Bardo manuscript recovery/QA from the preserved source copy rather than replacing originals.
+- Keep Vera cover/public-release metadata gated until final assets are approved.
 
 ## Operating rule
 
