@@ -1,12 +1,12 @@
 # The Long Reverb — Deployment Status
 
-Status: CANON CORRECTION MERGED TO MAIN / PAGES VERIFICATION FOLLOWS  
-Date: 2026-09-03 America/Los_Angeles  
+Status: REPOSITORY BUILD READY / GITHUB PAGES SETTING BLOCKS DEPLOYMENT  
+Date: 2026-09-04 America/Los_Angeles  
 Repository: `rondashstella-netizen/thelongreverb`  
 Default branch: `main`  
 Custom domain file: `CNAME -> thelongreverb.com`
 
-## Current public build
+## Current repository build
 
 - The Long Reverb remains the world/archive site.
 - `books.html` routes the current book architecture.
@@ -15,6 +15,7 @@ Custom domain file: `CNAME -> thelongreverb.com`
 - `bardo-conditions.html` and `vera.html` are the two numbered Bardos pages.
 - `chadpt.html` remains a related, unnumbered branch.
 - Signal Tower Press remains the canonical public imprint.
+- The homepage now features the approved Bardo Conditions and Hidden Current publication art already stored in the repository.
 
 ## Continuity locks
 
@@ -31,6 +32,8 @@ Custom domain file: `CNAME -> thelongreverb.com`
 
 ## Deployment infrastructure
 
+Present in the repository:
+
 - `.nojekyll`
 - `.github/workflows/pages.yml`
 - `CNAME`
@@ -39,12 +42,37 @@ Custom domain file: `CNAME -> thelongreverb.com`
 
 The Pages workflow is configured to deploy pushes to `main`.
 
-## Remaining external verification
+## Verified blocker — 2026-09-04
 
-1. Confirm the Pages workflow for this canon-correction commit completes successfully.
-2. Confirm `thelongreverb.com` resolves and HTTPS serves the corrected build.
-3. Continue replacing procedural art with approved project art where the final source/usage choice is already established.
-4. Add direct store/release destinations as those exact external destinations become available.
+Latest deployment run: `33872078715` on commit `48e363653a168c8220e42c6f0e0d9a7f8d720989` (`Feature approved book art on homepage`).
+
+Verified step state:
+
+- Checkout: **PASS**
+- Configure Pages: **FAIL**
+- Upload artifact: **SKIPPED**
+- Deploy to GitHub Pages: **SKIPPED**
+
+The Configure Pages log reports:
+
+- `Get Pages site failed: Not Found`
+- `Create Pages site failed: Resource not accessible by integration`
+
+This is not a site-file, CNAME, or artwork failure. The repository still needs GitHub Pages enabled in repository **Settings → Pages** with the build/deployment source set to **GitHub Actions**. The workflow token can deploy Pages after the site exists, but the current integration cannot create/enable the Pages site itself.
+
+## Shortest path to public serving
+
+1. In this repository, enable GitHub Pages and select **GitHub Actions** as the deployment source.
+2. Re-run workflow `33872078715` or push a no-content-change trigger after the setting is saved.
+3. Require Configure Pages, artifact upload, and deploy to all pass.
+4. Confirm `thelongreverb.com` resolves over HTTPS and the homepage plus one internal route return HTTP 200.
+
+Do not alter the approved site files, CNAME, cover art, manuscript state, or public purchase claims to work around this blocker unless a new deployment log identifies a different failure.
+
+## Other remaining work
+
+- Continue replacing procedural art only where the final approved source/usage choice is already established.
+- Add direct store/release destinations only when those exact external destinations are available.
 
 ## Operating rule
 
