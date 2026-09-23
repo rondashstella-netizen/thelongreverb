@@ -1,77 +1,81 @@
 # The Long Reverb — Deployment Status
 
-Status: REPOSITORY BUILD READY / GITHUB PAGES SETTING BLOCKS DEPLOYMENT  
-Date: 2026-09-05 America/Los_Angeles  
+Status: REPOSITORY BUILD READY / ONE-TIME GITHUB PAGES SETTING STILL REQUIRED  
+Date: 2026-09-22 America/Los_Angeles  
 Repository: `rondashstella-netizen/thelongreverb`  
 Default branch: `main`  
 Custom domain file: `CNAME -> thelongreverb.com`
 
-## Current repository build
+## Current repository state
 
-- The Long Reverb remains the world/archive site.
-- `books.html` routes the current book architecture.
-- `hidden-current.html` is the unnumbered nonfiction title page for **Hidden Currents**.
-- `architecture-of-resonance.html` is retained as the unnumbered **Architecture of Resonance** development/archive page.
-- `bardo-conditions.html` and `vera.html` are the two numbered Bardos pages.
-- `chadpt.html` remains a related, unnumbered branch.
-- Signal Tower Press remains the canonical public imprint.
-- The homepage and book pages use the approved Bardo Conditions and Hidden Currents publication art already stored in the repository.
-- The Vera page now uses recovered book identity and text-only presentation; no generic replacement cover is being presented as approved art.
-- Hidden Currents now exposes the actual eight-movement book architecture and the Carriers / Declassified Listening Notes positioning rather than placeholder copy.
+- Static site files are present at repository root.
+- `.nojekyll`, `CNAME`, `robots.txt`, and `sitemap.xml` are present.
+- The failed custom GitHub Actions Pages workflow was removed on 2026-09-22.
+- The intended publication method is now GitHub Pages **Deploy from a branch**, using `main` and `/(root)`.
+- RonDashStella.com remains the creator / commercial hub. TheLongReverb.com remains the public book / signal / archive property.
+- Signal Tower Press remains the canonical publishing imprint.
 
-## Continuity locks
+## 2026-09-22 visual/content refresh
 
-- **The Long Reverb is the unnumbered umbrella.**
-- **Hidden Currents is unnumbered.** Do not label it Book 1, Volume 1, Hidden Current / 01, or use it to infer a Long Reverb Book 3.
-- **Architecture of Resonance is unnumbered.** It remains development material unless Dash explicitly changes that status.
-- **Bardos / 01: Bardo Conditions.**
-- **Bardos / 02: Vera.**
-- **No Bardos / 03 is assigned.** Do not manufacture a third number from adjacent projects.
-- *ChadPt* is related and unnumbered.
-- Signal Tower Press is the canonical imprint. `Signal House Press` and `Static Temple` are obsolete public-language errors.
-- RonDashStella.com is the creator/store/services hub; TheLongReverb.com is the world/archive site.
-- Radio/tuner-dial identity belongs to the Bardo signal world, not Hidden Currents.
+The supplied Long Reverb, Bardo Conditions, and Signal Tower Press artboards were used as the visual direction lock for the public-facing refresh.
 
-## Bardo publication recovery status
+Updated in the repository:
 
-A separate recovery map is now maintained in Google Drive as `BARDO_FINAL_RECOVERY_MAP_2026-09-05`. The recovered terminal movement resolves the apparent Chux/Myth conflict as **Chux Myth** and restores the Unit 7 / fan-still-running / next-receiver ending without overwriting the 2026-08-31 rebuilt source. Bardo Conditions remains Book 1 and uses the single approved cover supplied by Dash.
+- `index.html` — rebuilt around the dark teal / brass signal language, four-work presentation, Visual Signal Archive, Bardo Engine, and Signal Tower Press.
+- `bardo-conditions.html` — rebuilt as a record / witness / signal page and no longer presents the repository placeholder Bardo cover as approved public art.
+- `signal-tower-press.html` — expanded into a complete launch page for the imprint.
+- `assets/site.css` — added responsive styling for the refreshed Long Reverb, Bardo Conditions, and Signal Tower Press pages.
 
-## Deployment infrastructure
+The exact uploaded raster art has not been substituted into the repository asset folder yet. Until that binary asset transfer is completed, the refreshed pages use the existing repository signal artwork and CSS-built motifs rather than falsely presenting a placeholder as approved cover art.
 
-Present in the repository:
+## Book/publication cautions
 
-- `.nojekyll`
-- `.github/workflows/pages.yml`
-- `CNAME`
-- `robots.txt`
-- `sitemap.xml`
-
-The Pages workflow is configured to deploy pushes to `main`.
+- Bardo Conditions remains identified publicly as **Bardos / Book 1**.
+- Vera remains in development/reconciliation.
+- Hidden Currents remains a separate nonfiction title.
+- No new cover should be generated or substituted for Bardo Conditions.
+- No purchase link should be presented for Bardo Conditions until the publication artifact and checkout destination are actually ready.
+- Do not infer new series numbering or rewrite current canon from old status notes.
 
 ## Verified deployment blocker
 
-The last independently inspected deployment attempts failed in **Configure Pages** before artifact upload or deployment. The log reported:
+The former GitHub Actions workflow failed at **Configure Pages** before artifact upload or deployment:
 
 - `Get Pages site failed: Not Found`
 - `Create Pages site failed: Resource not accessible by integration`
 
-This is not a site-file, CNAME, title, or artwork failure. The repository needs GitHub Pages enabled in repository **Settings → Pages** with the build/deployment source set to **GitHub Actions**. Content commits do not bypass that repository-level setting.
+The workflow has now been removed because this static site does not need a custom build pipeline.
 
 ## Shortest path to public serving
 
-1. In this repository, enable GitHub Pages and select **GitHub Actions** as the deployment source.
-2. Re-run the latest Pages workflow or push a no-content-change trigger after the setting is saved.
-3. Require Configure Pages, artifact upload, and deploy to all pass.
-4. Confirm `thelongreverb.com` resolves over HTTPS and the homepage plus one internal route return HTTP 200.
+In GitHub for this repository:
 
-Do not alter the approved CNAME, cover art, manuscript state, or public purchase claims to work around this setting-level blocker unless a new deployment log identifies a different failure.
+1. **Settings → Pages**
+2. Under **Build and deployment**, choose **Deploy from a branch**
+3. Branch: **main**
+4. Folder: **/(root)**
+5. Save
+6. Under **Custom domain**, set **thelongreverb.com**
+7. Save and enable HTTPS when GitHub makes the option available
 
-## Other remaining work
+After those repository-level settings are saved, pushes to `main` will publish the root static site without the removed Actions workflow.
 
-- Add direct store/release destinations only when those exact external destinations are available.
-- Continue Bardo manuscript recovery/QA from the preserved source copy rather than replacing originals.
-- Keep Vera cover/public-release metadata gated until final assets are approved.
+## Current proof
 
-## Operating rule
+Branch `main` is four commits ahead of the workflow-removal baseline and contains the refreshed public files. Latest verified head after the refresh:
 
-A stale file or old status note does not override the current production artifact or this corrected canon. Ordinary metadata/copy errors are edits, not reasons to stop the work.
+`ad1b5aec2749f420372314b6daf805298eb6307f`
+
+Files changed in that refresh:
+
+- `assets/site.css`
+- `bardo-conditions.html`
+- `index.html`
+- `signal-tower-press.html`
+
+## Next lane
+
+1. Enable branch-based GitHub Pages for The Long Reverb.
+2. Verify `https://thelongreverb.com/` and at least one internal route over HTTPS.
+3. Create the standalone Signal Tower Press GitHub repository and publish its independent domain.
+4. Continue the RonDashStella.com payment-hub build using only verified sell-now services and verified deliverables.
